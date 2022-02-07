@@ -4,9 +4,10 @@
 {
   name: "gpio",
   clock_primary: "clk_i",
-  bus_device: "reg",
-  bus_host: "",
-  available_inout_list: [
+  bus_interfaces: [
+        { protocol: "reg_iface", direction: "device"}
+    ]
+    available_inout_list: [
     { name: "gpio",
       width: 32,
       desc: "GPIO inout to/from PAD"
